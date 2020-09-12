@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Text.Json.Serialization;
 
-namespace People.Models
+namespace PeopleModule.Models
 {
     public class People
     {
+        [JsonPropertyName("gender")]
         public string Gender { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

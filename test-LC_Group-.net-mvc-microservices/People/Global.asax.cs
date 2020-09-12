@@ -1,7 +1,7 @@
 using System.Web;
 using System.Web.Http;
 
-namespace People
+namespace PeopleModule
 {
     public class WebApiApplication : HttpApplication
     {
