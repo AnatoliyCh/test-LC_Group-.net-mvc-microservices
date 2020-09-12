@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using PeopleModule.DataAccessLayer;
 using System.Web.Http;
-using PeopleModule.Repositories;
 
 namespace PeopleModule.Controllers
-{    
+{
     public class PeopleController : ApiController
     {
         private PeopleRepository peopleRepository = new PeopleRepository();
@@ -16,8 +11,8 @@ namespace PeopleModule.Controllers
         [Route("api/people/getInfo")]
         public IHttpActionResult GetInfo()
         {
-
-            return Ok("123");
+            var a = peopleRepository.GetNewPeople();
+            return Ok(a);
         }
     }
 }

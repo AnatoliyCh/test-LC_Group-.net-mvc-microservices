@@ -10,6 +10,7 @@ namespace PeopleModule.Models
         public string LastName { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
+        [JsonPropertyName("email")]
         public string Email { get; set; }
         public string Picture { get; set; }
         public string Poem { get; set; }
