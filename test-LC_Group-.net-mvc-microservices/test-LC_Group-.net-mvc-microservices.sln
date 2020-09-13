@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People", "People\People.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poems", "Poems\Poems.csproj", "{845C78AD-A944-4F9E-9DB0-EDECD98AB985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{9475FB8C-42D7-42D8-8598-091009DBEFD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{845C78AD-A944-4F9E-9DB0-EDECD98AB985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845C78AD-A944-4F9E-9DB0-EDECD98AB985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845C78AD-A944-4F9E-9DB0-EDECD98AB985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9475FB8C-42D7-42D8-8598-091009DBEFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9475FB8C-42D7-42D8-8598-091009DBEFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9475FB8C-42D7-42D8-8598-091009DBEFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9475FB8C-42D7-42D8-8598-091009DBEFD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
