@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Text.Json;
 
 namespace PoemsModule.DataAccessLayer
@@ -10,18 +9,6 @@ namespace PoemsModule.DataAccessLayer
     public class PoemsService
     {
         private readonly Random rnd = new Random();
-
-        /// <summary> Возвращает результат запроса </summary>
-        /// <param name="url">ссылка для запроса</param>
-        /// <param name="client">внешний HttpClient</param>
-        /// <returns>результат запроса</returns>
-        public static HttpResponseMessage ResponseResult(string url, HttpClient client)
-        {
-            if (client == null) return null;
-            var response = client.GetAsync(url);
-            response.Wait();
-            return response.Result;
-        }
 
         public double GetDistance(string text)
         {

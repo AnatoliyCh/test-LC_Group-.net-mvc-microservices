@@ -1,5 +1,4 @@
 ﻿using PeopleModule.Models;
-using System.Dynamic;
 using System.Net.Http;
 
 namespace PeopleModule.DataAccessLayer
@@ -43,7 +42,7 @@ namespace PeopleModule.DataAccessLayer
                         peopleDB.SaveChanges();
                         SetPoem(newPeople, client);
                     }
-                }                
+                }
             }
             return newPeople;
         }

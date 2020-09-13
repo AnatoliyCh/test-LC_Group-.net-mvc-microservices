@@ -30,7 +30,7 @@ namespace WebSite.Controllers
                 if (result.IsSuccessStatusCode)
                 {
                     string strId = result.Content.ReadAsStringAsync().Result;
-                    
+
                     int id = -1;
                     if (int.TryParse(strId, out id))
                     {
@@ -38,7 +38,7 @@ namespace WebSite.Controllers
                     }
                 }
             }
-            
+
             return View("Index", people);
         }
 

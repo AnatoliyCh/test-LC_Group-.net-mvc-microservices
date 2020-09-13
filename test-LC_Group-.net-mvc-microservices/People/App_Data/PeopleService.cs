@@ -22,7 +22,7 @@ namespace PeopleModule.DataAccessLayer
             catch (System.Exception)
             {
                 return new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.BadRequest };
-            }            
+            }
         }
 
         /// <summary> Конвертирование JSON в People </summary>

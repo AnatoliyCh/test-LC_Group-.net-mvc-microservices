@@ -1,5 +1,5 @@
-﻿using System.Net.Http;
-using PeopleModule.DataAccessLayer;
+﻿using PeopleModule.DataAccessLayer;
+using System.Net.Http;
 
 namespace PoemsModule.DataAccessLayer
 {
@@ -14,7 +14,7 @@ namespace PoemsModule.DataAccessLayer
         {
             using (var client = new HttpClient())
             {
-                var result = PoemsService.ResponseResult(URL_POEMS, client);
+                var result = PeopleService.ResponseResult(URL_POEMS, client);
                 if (result.IsSuccessStatusCode)
                 {
                     var poem = poemsService.MappingPoem(result.Content.ReadAsStringAsync().Result);
@@ -28,7 +28,7 @@ namespace PoemsModule.DataAccessLayer
                             peopleDB.Entry(people).State = System.Data.Entity.EntityState.Modified; // объект есть в бд, надо его модифицировать
                             peopleDB.SaveChanges();
                             return true;
-                        }                        
+                        }
                     }
                 }
             }
