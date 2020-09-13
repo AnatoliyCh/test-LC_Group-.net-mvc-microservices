@@ -1,0 +1,46 @@
+﻿@model PeopleModule.Models.People
+@{ ViewBag.Title = "WebSite - People"; }
+
+<h2>People</h2>
+
+@if (Model != null)
+{
+    <dl class="dl-horizontal">
+        <dt>@Html.LabelFor(model => model.Gender)</dt>
+        <dd> @Html.DisplayFor(model => model.Gender) </dd>
+
+        <dt>@Html.LabelFor(model => model.FirstName)</dt>
+        <dd>@Html.DisplayFor(model => model.FirstName)</dd>
+
+        <dt>@Html.LabelFor(model => model.LastName)</dt>
+        <dd>@Html.DisplayFor(model => model.LastName)</dd>
+
+        <dt>"[city] [street]"</dt>
+        <dd>@Html.DisplayFor(model => model.City) @Html.DisplayFor(model => model.Street)</dd>
+
+        <dt>@Html.LabelFor(model => model.Email)</dt>
+        <dd>@Html.DisplayFor(model => model.Email)</dd>
+    </dl>
+
+    <img src="@Model.Picture" />
+
+    <dl class="dl-horizontal">
+        <dt>@Html.LabelFor(model => model.Quote)</dt>
+        <dd> @Html.DisplayFor(model => model.Quote) </dd>
+
+        <dt>@Html.LabelFor(model => model.Poem)</dt>
+        <dd>@Html.DisplayFor(model => model.Poem)</dd>
+
+        <dt>@Html.LabelFor(model => model.Distance)</dt>
+        <dd>@Html.DisplayFor(model => model.Distance)</dd>
+    </dl>
+}
+else
+{
+    <h3>Пусто!</h3>
+}
+
+<dl class="dl-horizontal">
+    <dt>@Html.ActionLink("Reload page", "ReloadPage", Model)</dt>
+    <dd>@Html.ActionLink("Get one", "GetInfo")</dd>
+</dl>
