@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace PeopleModule.Models
 {
@@ -18,5 +19,23 @@ namespace PeopleModule.Models
         public string Poem { get; set; }
         public string Quote { get; set; }
         public double Distance { get; set; }
+
+        [NotMapped]
+        public bool Empty
+        {
+            get
+            {
+                return (Id == 0 &&
+                        string.IsNullOrWhiteSpace(Gender) &&
+                        string.IsNullOrWhiteSpace(FirstName) &&
+                        string.IsNullOrWhiteSpace(LastName) &&
+                        string.IsNullOrWhiteSpace(City) &&
+                        string.IsNullOrWhiteSpace(Street) &&
+                        string.IsNullOrWhiteSpace(Email) &&
+                        string.IsNullOrWhiteSpace(Picture) &&
+                        string.IsNullOrWhiteSpace(Poem) &&
+                        string.IsNullOrWhiteSpace(Quote));
+            }
+        }
     }
 }

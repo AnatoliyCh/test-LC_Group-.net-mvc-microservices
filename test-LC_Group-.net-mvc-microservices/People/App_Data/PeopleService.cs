@@ -13,9 +13,16 @@ namespace PeopleModule.DataAccessLayer
         /// <returns>результат запроса</returns>
         public static HttpResponseMessage ResponseResult(string url, HttpClient client)
         {
-            var response = client.GetAsync(url);
-            response.Wait();
-            return response.Result;
+            try
+            {
+                var response = client.GetAsync(url);
+                response.Wait();
+                return response.Result;
+            }
+            catch (System.Exception)
+            {
+                return new HttpResponseMessage() { StatusCode = System.Net.HttpStatusCode.BadRequest };
+            }            
         }
 
         /// <summary> Конвертирование JSON в People </summary>
