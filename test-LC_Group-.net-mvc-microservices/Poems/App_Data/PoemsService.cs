@@ -1,6 +1,7 @@
 ﻿using PoemsModule.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 
@@ -24,7 +25,7 @@ namespace PoemsModule.DataAccessLayer
 
         public double GetDistance(string text)
         {
-            string[] sentences = text.Split('\n');
+            string[] sentences = text.Split('\n').Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
             double maxCost = 0, curCost = 0;
             if (sentences.Length > 1)
             {
