@@ -33,6 +33,6 @@ namespace PeopleModule.DataAccessLayer
             people.Street = (string)jObject.SelectToken(parentNode + ".location.street.name");
             people.Picture = (string)jObject.SelectToken(parentNode + ".picture.medium");
             return people;
-        }        
+        }
     }
 }

@@ -4,6 +4,8 @@ namespace PeopleModule.Models
 {
     public class People
     {
+        [JsonIgnore]
+        public int Id { get; set; }
         [JsonPropertyName("gender")]
         public string Gender { get; set; }
         public string FirstName { get; set; }
