@@ -9,8 +9,10 @@ namespace PoemsModule.Controllers
 
         [HttpGet, Route("api/poems/getPoem/{id}")]
         public IHttpActionResult GetPoem(int id)
-        {            
-            return Ok(poemsRepository.SetPoem(id));
+        {
+            var result = poemsRepository.SetPoem(id);
+            if (result) return Ok(result);
+            return BadRequest();
         }
     }
 }

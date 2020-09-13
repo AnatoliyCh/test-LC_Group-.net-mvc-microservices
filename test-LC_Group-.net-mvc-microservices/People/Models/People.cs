@@ -17,6 +17,6 @@ namespace PeopleModule.Models
         public string Picture { get; set; }
         public string Poem { get; set; }
         public string Quote { get; set; }
-        public string Distance { get; set; }
+        public double Distance { get; set; }
     }
 }
