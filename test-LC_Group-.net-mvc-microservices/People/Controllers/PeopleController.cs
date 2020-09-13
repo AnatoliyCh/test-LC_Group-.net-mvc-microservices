@@ -7,12 +7,12 @@ namespace PeopleModule.Controllers
     {
         private readonly PeopleRepository peopleRepository = new PeopleRepository();
 
-        [HttpGet]
-        [Route("api/people/getInfo")]
+        [HttpGet, Route("api/people/getInfo")]
         public IHttpActionResult GetInfo()
         {
-            var a = peopleRepository.GetNewPeople();
-            return Ok(a);
+            var result = peopleRepository.GetNewPeople();
+            if (result != null) return Ok(result.Id);
+            return BadRequest();
         }
     }
 }
