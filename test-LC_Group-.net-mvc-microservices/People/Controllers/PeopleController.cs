@@ -5,7 +5,7 @@ namespace PeopleModule.Controllers
 {
     public class PeopleController : ApiController
     {
-        private PeopleRepository peopleRepository = new PeopleRepository();
+        private readonly PeopleRepository peopleRepository = new PeopleRepository();
 
         [HttpGet]
         [Route("api/people/getInfo")]

@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using PoemsModule.DataAccessLayer;
 using System.Web.Http;
 
 namespace PoemsModule.Controllers
 {
     public class PoemsController : ApiController
     {
-        [HttpGet]
-        [Route("api/poems/getPoem/{id}")]
+        private readonly PoemsRepository poemsRepository = new PoemsRepository();
+
+        [HttpGet, Route("api/poems/getPoem/{id}")]
         public IHttpActionResult GetPoem(int id)
         {            
-            return Ok();
+            return Ok(poemsRepository.SetPoem(id));
         }
     }
 }
